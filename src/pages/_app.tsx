@@ -12,8 +12,9 @@ import Image from "next/image";
 import Loader from "../components/Loader";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
-import { Alignment, Fit, Layout, useRive } from "@rive-app/react-canvas";
+
 const Navbar = dynamic(() => import("../components/navbar"), { ssr: false });
+import ExploreGame from "../components/exploreGame";
 
 export default function App({
   Component,
@@ -87,7 +88,7 @@ export default function App({
         </AnimatePresence>
         <Footer />
       </div>
-      <Analytics />
+      {/* <Analytics /> */}
     </ApolloProvider>
   );
 }
